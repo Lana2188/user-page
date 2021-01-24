@@ -1,0 +1,54 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+     <div class="login-box">
+        <h2>Registration</h2>
+        <form action="" method="POST" id="reg-form">
+            <div class="user-box">
+                <input type="text" name="name" required="" id="name">
+                <label>Username</label>
+            </div>
+
+            <div class="gender" >
+                <label>Gender</label>
+            <select name="gender" id="gender">
+                <option value="male">male</option>
+                <option value="female">female</option>
+                <option value="skip">skip</option>
+            </select>
+            
+            </div>
+
+    <div class="user-box">
+        <input type="email" name="email" required="" id="email">
+        <label>Email</label>
+    </div>
+
+    <div class="user-box">
+        <input type="password" name="password" required="" id="password">
+        <label>Password</label>
+    </div>
+
+    <% if(message) {%>
+        <p>
+            <%- message %>
+        </p>
+        <%}%>
+
+            <input type="submit" name="submit" id="submit" value="Submit" class="inpSub">
+            <p class="href">Don't have an account yet? Click <a class="href" href="/login">here</a></p>
+
+            </form>
+            </div>
+
+</body>
+
+</html>

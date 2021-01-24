@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/css/user.css">
+</head>
+
+
+<body class="profile-page sidebar-collapse">
+
+    <nav class="navbar navbar-transparent  fixed-top navbar-expand-lg" color-on-scroll="100" id="sectionsNav">
+
+        <div>
+            <a class="logout" href="/logout">log out</a>
+        </div>
+
+    </nav>
+
+    <div class="page-header header-filter" data-parallax="true" id="bg" style="background-image:url('<%= user.bgPhoto %>')"
+        alt="bgPhoto';">
+    </div>
+    <div class="main main-raised">
+        <div class="profile-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 ml-auto mr-auto">
+                        <div class="profile">
+                            <div class="avatar">
+                                <% if(user.avatar) {%>
+                                    <img src="/uploads/<%= user.avatar %>" alt="" id="img"
+                                        class="img-raised rounded-circle img-fluid">
+                                    <%}else if(user.gender=='male' ){%>
+                                        <img src="/images/default-male.jpg" alt="" id="img"
+                                            class="img-raised rounded-circle img-fluid">
+                                        <%}else if(user.gender=='female' ){%>
+                                            <img src="/images/default-female.png" alt="" id="img"
+                                                class="img-raised rounded-circle img-fluid">
+                                            <%}else if(user.gender=='skip' ){%>
+                                                <img src="/images/default-avatar.png" alt="" id="img"
+                                                    class="img-raised rounded-circle img-fluid">
+
+                                                <%}%>
+
+                            </div>
+                            <div class="name">
+                                <h3 class="title">
+                                    <%= user.name %>
+                                </h3>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="description text-center">
+
+                    <div>
+                        <form action="" method="post" enctype="multipart/form-data" id="user-img-form">
+                        <p> <label for="avatar">Avatar</label><br>
+                            <input type="file" name="avatar" id="avatar" onchange="showPreview(event)">
+                        </p>
+                        <p>
+                            <label for="bgPhoto">Background</label><br>
+                            <input type="file" name="bgPhoto" id="bgPhoto" onchange="showBgPreview(event)" >
+                        </p>
+                        <input type="submit" value="save">
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+<script src="/javascript/preview.js"></script>
+
+</body>
+
+</html>

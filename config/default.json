@@ -1,0 +1,5 @@
+{
+    "mongoURL": "mongodb+srv://admin:admin@mongo.87plr.mongodb.net/UserPage?retryWrites=true&w=majority",
+    "jwtsecret":"somthing non important",
+    "cookie":"same thing"
+}
