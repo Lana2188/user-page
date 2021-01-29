@@ -20,7 +20,7 @@ if(!token){
             console.log('Token error')
             return res.redirect('/login')
         }else{
-            console.log('decode' +decoded)
+            // console.log('decode' +decoded)
             req.user = decoded
             next()
         }

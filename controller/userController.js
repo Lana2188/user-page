@@ -5,7 +5,7 @@ class userController {
     async userPage(req, res) {
 
         const user = await User.findOne({ email: req.user.email })
-        console.log(user)
+        // console.log(user)
         res.render('user', { user })
     };
 
@@ -45,9 +45,16 @@ class userController {
         } catch (e) {
             console.log('user: ' + e)
         }
-    }
+    };
 
+// chat page
 
+async chatPage(req, res) {
+
+    const user = await User.findOne({ email: req.user.email })
+    // console.log(user)
+    res.render('chat', { user })
+};
 
 
 
