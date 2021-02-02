@@ -69,7 +69,7 @@ io.on('connection', socket => {
         // console.log(userData)
         const user = messageObj(userId, userData.username, userData.avatar)
              users.push(user)
-        io.emit('users', users)
+        io.emit('users',users)
 
 
   socket.on('disconnect', () => {

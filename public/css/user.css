@@ -103,9 +103,12 @@ p {
   margin-top: -80px;
 }
 
-.logout{
+.btn{
     float: right;
-    text-decoration: none;
-    color: navy;
+	cursor: pointer;
+	padding: 5px 15px;
+	background-image: linear-gradient(to left top,  #67939bb2,    #9fd3d4c0,#82b6cab4 );	
+	border: 0;
+	font-size: 17px;
     
 }

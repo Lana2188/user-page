@@ -27,7 +27,7 @@
 					</div>
 					<div class="card-body contacts_body">
 						<ui id="ul" class="contacts">
-						<!-- li user -->
+						<!-- li users -->
 						</ui>
 					</div>
 					<div class="card-footer"></div>
@@ -40,16 +40,16 @@
 				<div class="col-md-8 col-xl-6 chat">
 					<div class="card">
 						<div class="card-header msg_head">
-							<a style="float: right;" href="/user/main">main</a>
+							<a class="btn" href="/user/main">main</a>
 							<div class="d-flex bd-highlight">
 
 								<div class="img_cont">
-									<img id="img" src="/images/default-avatar.png" class="rounded-circle user_img">
+									<img id="img" src="/uploads/<%= user.avatar %>" class="rounded-circle user_img">
 									<span class="online_icon"></span>
 										
 								</div>
 								<div class="user_info">
-									<span>Chat with User</span>	
+									<span><%= user.name%></span>	
 																
 								</div>	
 																
@@ -60,7 +60,7 @@
 
 
                    <!-- Messages div-->
-						<div id="msgDiv"class="card-body msg_card_body" id="msg">
+						<div id="msgDiv"class="card-body msg_card_body" >
 						
 							<!-- message -->
 

@@ -1,3 +1,4 @@
+
 const socket = io()
 
 // get connected user name
@@ -7,7 +8,7 @@ const avatar = document.getElementById('avatar').value
 
 const form = document.getElementById('form')
 const msg = document.getElementById('txt')
-
+const msgdiv = document.getElementById('msgDiv')
 
 socket.emit('name', { username, avatar})
 
@@ -19,7 +20,11 @@ showUsers(users)
 })
 // get username, socketid, avatar, time
 socket.on('server', msg => {    
+  
     printMessage(msg)
+
+    // scroll down
+     msgdiv.scrollTop = msgdiv.scrollHeight
 })
 
 
@@ -101,7 +106,6 @@ function showUsers(users){
 li.style.cursor = 'pointer'
 document.getElementById('ul').appendChild(li)   
 
- 
 
 
 
@@ -109,3 +113,4 @@ document.getElementById('ul').appendChild(li)
 
 
 }
+

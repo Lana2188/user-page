@@ -161,3 +161,13 @@ position: relative;
 margin-bottom: 15px !important;
 }
 }
+
+.btn {
+    float: right;
+	cursor: pointer;
+	padding: 5px 15px;
+	background-image: linear-gradient(to left top,  #67939bb2,    #9fd3d4c0,#82b6cab4 );	
+	border: 0;
+	font-size: 17px;
+
+}
